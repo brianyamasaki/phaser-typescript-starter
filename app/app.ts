@@ -3,13 +3,27 @@ class SimpleGame {
     game:Phaser.Game;
     logo:Phaser.Sprite;
     cursors:Phaser.CursorKeys;
+    canvasSize = {
+        x: 800,
+        y: 600
+    };
+    idParent = 'game';
 
     constructor() {
-        this.game = new Phaser.Game(800, 600, Phaser.AUTO, "content", this);
+        this.game = new Phaser.Game(
+            this.canvasSize.x, 
+            this.canvasSize.y, 
+            Phaser.AUTO, 
+            this.idParent, 
+            this);
     }
 
     preload() {
         this.game.load.image("logo", "images/phaser-logo-small.png");
+    }
+
+    init() {
+
     }
 
     create() {

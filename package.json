@@ -1,0 +1,28 @@
+{
+  "name": "phaser-typescript-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "gulp clean",
+    "postinstall": "gulp copyphaserlib",
+    "start": "parallel build-watch dev-server",
+    "dev": "tsc && webpack-dev-server --watch --content-base . -d --progress",
+    "dev-server": "webpack-dev-server --watch --content-base . -d --progress",
+    "build-watch": "tsc -w",
+    "build": "tsc"
+  },
+  "keywords": [ "phaser", "typescript", "gulp"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rimraf": "^0.2.1",
+    "npm-parallel": "^2.0.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "phaser": "^2.6.2"
+  }
+}
